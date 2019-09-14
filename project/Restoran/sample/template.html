@@ -1,0 +1,45 @@
+<?php 
+include_once 'koneksi.php';
+session_start();
+if($_SESSION['id_level'] != 2){
+  header("Location:special-login.php");
+}
+?>
+<?php include_once 'head.php'; ?>
+<?php include_once 'special-navbar.php'; ?>
+<style>
+    .parallax-container {
+      height: 300px;
+    }
+</style>
+<div>
+<div class="row">
+    <div class="col s12 m6 z-depth-3" style='height:430px; overflow-y:scroll;'> <!--style='height:500px; overflow:scroll'-->
+      <?php include_once 'special-tablemasakan.php'; ?>
+    </div><!-- data2 -->
+    <div class="col s12 m6">
+      <?php include_once 'special-pengguna.php'; ?>
+    </div> <br> <br>
+    <div class="col s12 m5 z-depth-5" style='border-radius: 28px;'>
+      <?php include_once 'special-tablemeja.php'; ?>
+    </div>
+    <div class="col s12 m7">
+      <h5>Kritik & Saran Dari Para Pelanggan</h5>
+      <iframe src="special-kritik.php" frameborder="0" display="block" outline="none" width="100%"></iframe>
+    </div>
+    <div class="col s12 m7" style='height:430px; overflow-y:scroll;'>
+      <blockquote>
+      <h5>Table Data Pemesanan Masakan</h5>
+      </blockquote>
+      <?php include_once 'special-masakanyangdipesan.php'; ?>
+    </div>
+    <div class="col s12 m12">
+      <h5 class="flow-text">Table Data Orderan Pelanggan</h5>
+      <?php include_once 'special-tableorderan.php'; ?>
+    </div>
+</div>
+</div>
+<div class="parallax-container">
+                <div class="parallax"><img src="image/parallax3.jpg"></div>
+      </div>
+<?php include_once 'footer.php' ?>
