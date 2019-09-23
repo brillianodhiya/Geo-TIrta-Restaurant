@@ -4,6 +4,31 @@
 
 > This project is created by using PHP and MySQL
 
+## Features
+
+> user
+* Validation Login / Register
+* Table Services
+* Booking table and Order menu's
+* Receipt of payment export by PDF
+* QR code on Receipt of payment
+* Add Feedback
+
+>admin
+* Add Table & Menu's
+* Accept payment
+* Sales history export by PDF
+* Feedback filter
+* User management
+
+## Used Framework
+
+* [Materialize](https://materializecss.com/)
+* [SwiperJs](https://swiperjs.com/)
+* [dompdf](https://dompdf.github.io/)
+* [phpqrcode](http://phpqrcode.sourceforge.net/)
+  
+
 ## To run this project locally
 * Clone this repo
 * Import this [restoran.sql](akses/restoran.sql) to your Database
